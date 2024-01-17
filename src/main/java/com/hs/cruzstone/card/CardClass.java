@@ -1,7 +1,12 @@
-package card;
+/*
+ * All rights reserved by Austin McGowan, Isai Cruz, and the other brother.
+ * This started as a silly project no one would ever see so this license shouldn't matter.
+ *
+ * Copyright 2024
+ */
+package com.hs.cruzstone.card;
 
-public enum CardClassJava {
-
+public enum CardClass {
     DRUID("Druid"),
     MAGE("Mage"),
     HUNTER("Hunter"),
@@ -16,7 +21,7 @@ public enum CardClassJava {
 
     private String prettyName;
 
-    CardClassJava(String prettyName) {
+    CardClass(String prettyName) {
         this.prettyName = prettyName;
     }
 
