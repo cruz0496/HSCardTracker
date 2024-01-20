@@ -1,4 +1,4 @@
-2024-01-19 22:54:14.392734-06:00 database: wrong user or password; user: "SA"
+2024-01-20 10:30:22.542217-06:00 database: wrong user or password; user: ""
 org.h2.message.DbException: Wrong user name or password [28000-224]
 	at org.h2.message.DbException.get(DbException.java:223)
 	at org.h2.message.DbException.get(DbException.java:199)
@@ -12,7 +12,7 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:522)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 8 more
-2024-01-19 22:54:26.111413-06:00 database: wrong user or password; user: "THREELEGGEDHORSE"
+2024-01-20 10:30:22.887411-06:00 database: wrong user or password; user: ""
 org.h2.message.DbException: Wrong user name or password [28000-224]
 	at org.h2.message.DbException.get(DbException.java:223)
 	at org.h2.message.DbException.get(DbException.java:199)

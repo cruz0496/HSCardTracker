@@ -1,0 +1,6 @@
+#FileLock
+#Sat Jan 20 10:29:03 CST 2024
+hostName=192.168.50.34
+id=18d27b448c9052f0895042ce6c4e68c06fdebac0a4d
+method=file
+server=192.168.50.34\:9090

@@ -21,5 +21,5 @@ data class CardEntityKT(
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(nullable = false)
-    val internalCardId: Int? = null,
+    val internalCardId: Int,
 )
