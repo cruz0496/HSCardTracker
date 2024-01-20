@@ -25,6 +25,8 @@ public enum CardClass {
         this.prettyName = prettyName;
     }
 
+    CardClass() {}
+
     public String getPrettyName() {
         return this.prettyName;
     }

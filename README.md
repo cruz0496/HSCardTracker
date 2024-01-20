@@ -16,11 +16,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
-What things you need to install the software and how to install them.
+### Database Setup
+In order to access the database in Intellij you will need to add a data source. You can do this by going into `View > Tool Windows > Database`. This will open the database tool likely docked to the right side.
 
-```
-Examples
-```
+From here click the `+` symbol in the top left and select "Import data source...". This should build a datasource for your using the properties in `application.yml`.
+
+Note that the database build itself everytime the program is run. The database file is stored in `src/main/resources/db`and should be tracked to github.
+
+### Coding Style
+Spotless is set up to format your code but if your code style is set contrary to it you can end up in a fight for your life. As such I have included a codestyle file in the project that matches up with the code style spotless is using. To get to your code style settings go to
+
+`File > Settings > Editor > Codestyle > Java`
+
+Click the treedot/hamburger menu and select `import schema > Intellij IDE code style XML`. Select the `intellij-java-palantir-style` file and click the `current schema` box to overwrite whatever your current settings are.
+
+This should keep you mostly inline with spotless as your type.
 
 ## Deployment
 

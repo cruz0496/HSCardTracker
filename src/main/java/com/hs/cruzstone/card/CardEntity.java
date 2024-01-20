@@ -6,7 +6,16 @@
 */
 package com.hs.cruzstone.card;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "card")
 class CardEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int internalCardId;
+
     private CardClass cardClass;
     private int mana;
 }

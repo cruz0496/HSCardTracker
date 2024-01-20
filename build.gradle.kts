@@ -1,4 +1,5 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.asciidoctor.gradle.jvm.AsciidoctorTask
+import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
     pmd
@@ -52,7 +53,6 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 
-    // spotbugs("com.github.spotbugs:spotbugs:4.8.3")
     spotbugsPlugins("com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0")
 
     // Currently need to bring this in because Gradle does not have support for PMD7
@@ -61,7 +61,7 @@ dependencies {
     pmd("net.sourceforge.pmd:pmd-java:7.0.0-rc4")
 }
 
-tasks.withType<KotlinCompile> {
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs += "-Xjsr305=strict"
         jvmTarget = "21"
@@ -76,9 +76,24 @@ tasks.test {
     outputs.dir(snippetsDir)
 }
 
-tasks.named("asciidoctor") {
+tasks.withType<AsciidoctorTask> {
     dependsOn("test")
     inputs.dir(snippetsDir)
+}
+
+tasks.jacocoTestReport {
+    reports.xml.required = true
+    reports.html.required = true
+}
+tasks.jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = "0.85".toBigDecimal()
+                isFailOnViolation = false
+            }
+        }
+    }
 }
 
 kotlin {
@@ -157,12 +172,9 @@ tasks.test {
     finalizedBy(tasks.jacocoTestReport)
 }
 // / If you trigger jacocoTestReport manually, it will run the tests first
-tasks.jacocoTestReport {
-    dependsOn(tasks.test)
-}
-tasks.withType<JavaCompile> {
-    dependsOn(tasks.spotlessApply)
-}
-tasks.withType<KotlinCompile> {
+tasks.jacocoTestReport { dependsOn(tasks.test) }
+tasks.withType<JavaCompile> { dependsOn(tasks.spotlessApply) }
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> { dependsOn(tasks.spotlessApply) }
+tasks.withType<BootRun> {
     dependsOn(tasks.spotlessApply)
 }
