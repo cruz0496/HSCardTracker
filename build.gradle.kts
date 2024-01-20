@@ -1,6 +1,3 @@
-import org.asciidoctor.gradle.jvm.AsciidoctorTask
-import org.springframework.boot.gradle.tasks.run.BootRun
-
 plugins {
     pmd
     jacoco
@@ -76,7 +73,7 @@ tasks.test {
     outputs.dir(snippetsDir)
 }
 
-tasks.withType<AsciidoctorTask> {
+tasks.withType<org.asciidoctor.gradle.jvm.AsciidoctorTask> {
     dependsOn("test")
     inputs.dir(snippetsDir)
 }
@@ -175,6 +172,4 @@ tasks.test {
 tasks.jacocoTestReport { dependsOn(tasks.test) }
 tasks.withType<JavaCompile> { dependsOn(tasks.spotlessApply) }
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> { dependsOn(tasks.spotlessApply) }
-tasks.withType<BootRun> {
-    dependsOn(tasks.spotlessApply)
-}
+tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> { dependsOn(tasks.spotlessApply) }
