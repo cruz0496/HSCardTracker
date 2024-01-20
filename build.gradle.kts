@@ -5,7 +5,7 @@ plugins {
     jacoco
     java
     checkstyle
-    
+
     id("org.springframework.boot") version "3.2.1"
     id("io.spring.dependency-management") version "1.1.4"
     id("org.asciidoctor.jvm.convert") version "3.3.2"
@@ -52,7 +52,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 
-    //spotbugs("com.github.spotbugs:spotbugs:4.8.3")
+    // spotbugs("com.github.spotbugs:spotbugs:4.8.3")
     spotbugsPlugins("com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0")
 
     // Currently need to bring this in because Gradle does not have support for PMD7
@@ -95,8 +95,9 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
 
         cleanthat()
             .sourceCompatibility("21")
-            .addMutator("ErrorProneMutators")
-            .addMutator("SafeAndConsensualMutators")
+            .addMutator("ErrorProne")
+            .addMutator("SafeAndConsensual")
+            .includeDraft(false)
 
         // This is an updated version of Google's java rules that has better handling of lambdas.
         // IntelliJ plugin available here: https://plugins.jetbrains.com/plugin/13180-palantir-java-format
@@ -116,8 +117,6 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
 pmd {
     toolVersion = "7.0.0-rc4"
 }
-
-
 
 configure<com.github.spotbugs.snom.SpotBugsExtension> {
     toolVersion = "4.8.3"
@@ -145,7 +144,6 @@ tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 configure<com.adarshr.gradle.testlogger.TestLoggerExtension> {
     theme = com.adarshr.gradle.testlogger.theme.ThemeType.MOCHA
 }
-
 
 fun isNonStable(version: String): Boolean {
     val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
