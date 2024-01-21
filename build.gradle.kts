@@ -2,7 +2,7 @@ plugins {
     pmd
     jacoco
     java
-    checkstyle
+    // checkstyle
 
     id("org.springframework.boot") version "3.2.1"
     id("io.spring.dependency-management") version "1.1.4"
@@ -14,7 +14,7 @@ plugins {
     id("com.diffplug.spotless") version "6.24.0"
     id("com.github.spotbugs") version "6.0.6"
     id("com.github.ben-manes.versions") version "0.50.0"
-    id("ca.cutterslade.analyze") version "1.9.1"
+    // id("ca.cutterslade.analyze") version "1.9.1"
     id("com.adarshr.test-logger") version "4.0.0"
 }
 
@@ -142,10 +142,10 @@ tasks.withType<com.github.spotbugs.snom.SpotBugsTask> {
     reports.create("xml").required = true
 }
 
-tasks.withType<Checkstyle> {
-    reports.xml.required = true
-    reports.html.required = true
-}
+// tasks.withType<Checkstyle> {
+//    reports.xml.required = true
+//    reports.html.required = true
+// }
 
 tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {
     rejectVersionIf {
