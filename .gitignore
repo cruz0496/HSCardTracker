@@ -123,3 +123,4 @@ build/**
 
 # ignore the .gradle directory
 .gradle/**
+cards_json/**
