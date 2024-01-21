@@ -14,7 +14,7 @@ import jakarta.persistence.Id
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "card", schema = "KOTLIN", catalog = "CRUZSTONE")
+@Table(name = "card", schema = "KOTLIN")
 data class CardEntityKT(
     val cardClass: CardClassKT,
     val mana: Int,
