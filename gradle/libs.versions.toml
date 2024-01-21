@@ -1,0 +1,44 @@
+[versions]
+net-sourceforge-pmd = "7.0.0-rc4"
+org-jacoco = "0.8.9"
+org-jetbrains-kotlin = "1.9.21"
+org-springframework-boot = "3.2.1"
+
+[libraries]
+com-fasterxml-jackson-module-jackson-module-kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.15.3"
+com-github-spotbugs = "com.github.spotbugs:spotbugs:4.8.3"
+com-h2database-h2 = "com.h2database:h2:2.2.224"
+com-h3xstream-findsecbugs-findsecbugs-plugin = "com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0"
+net-sourceforge-pmd-pmd-ant = { module = "net.sourceforge.pmd:pmd-ant", version.ref = "net-sourceforge-pmd" }
+net-sourceforge-pmd-pmd-java = { module = "net.sourceforge.pmd:pmd-java", version.ref = "net-sourceforge-pmd" }
+org-apache-logging-log4j-log4j-core = "org.apache.logging.log4j:log4j-core:2.17.1"
+org-jacoco-org-jacoco-agent = { module = "org.jacoco:org.jacoco.agent", version.ref = "org-jacoco" }
+org-jacoco-org-jacoco-ant = { module = "org.jacoco:org.jacoco.ant", version.ref = "org-jacoco" }
+org-jetbrains-annotations = "org.jetbrains:annotations:13.0"
+org-jetbrains-kotlin-kotlin-build-tools-impl = { module = "org.jetbrains.kotlin:kotlin-build-tools-impl", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-compiler-embeddable = { module = "org.jetbrains.kotlin:kotlin-compiler-embeddable", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-klib-commonizer-embeddable = { module = "org.jetbrains.kotlin:kotlin-klib-commonizer-embeddable", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "org-jetbrains-kotlin" }
+org-jetbrains-kotlin-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "org-jetbrains-kotlin" }
+org-projectlombok-lombok = "org.projectlombok:lombok:1.18.30"
+org-slf4j-slf4j-simple = "org.slf4j:slf4j-simple:2.0.0"
+org-springframework-boot-spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools", version.ref = "org-springframework-boot" }
+org-springframework-boot-spring-boot-starter-cache = { module = "org.springframework.boot:spring-boot-starter-cache", version.ref = "org-springframework-boot" }
+org-springframework-boot-spring-boot-starter-data-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "org-springframework-boot" }
+org-springframework-boot-spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "org-springframework-boot" }
+org-springframework-boot-spring-boot-starter-validation = { module = "org.springframework.boot:spring-boot-starter-validation", version.ref = "org-springframework-boot" }
+org-springframework-boot-spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "org-springframework-boot" }
+org-springframework-restdocs-spring-restdocs-mockmvc = "org.springframework.restdocs:spring-restdocs-mockmvc:3.0.1"
+
+[plugins]
+com-adarshr-test-logger = "com.adarshr.test-logger:4.0.0"
+com-diffplug-spotless = "com.diffplug.spotless:6.24.0"
+com-github-ben-manes-versions = "com.github.ben-manes.versions:0.50.0"
+com-github-spotbugs = "com.github.spotbugs:6.0.6"
+io-spring-dependency-management = "io.spring.dependency-management:1.1.4"
+nl-littlerobots-version-catalog-update = "nl.littlerobots.version-catalog-update:0.8.3"
+org-asciidoctor-jvm-convert = "org.asciidoctor.jvm.convert:3.3.2"
+org-jetbrains-kotlin-jvm = "org.jetbrains.kotlin.jvm:1.9.21"
+org-jetbrains-kotlin-plugin-jpa = "org.jetbrains.kotlin.plugin.jpa:1.9.21"
+org-jetbrains-kotlin-plugin-spring = "org.jetbrains.kotlin.plugin.spring:1.9.21"
+org-springframework-boot = "org.springframework.boot:3.2.1"

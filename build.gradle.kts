@@ -4,18 +4,18 @@ plugins {
     java
     // checkstyle
 
-    id("org.springframework.boot") version "3.2.1"
-    id("io.spring.dependency-management") version "1.1.4"
-    id("org.asciidoctor.jvm.convert") version "3.3.2"
-    kotlin("jvm") version "1.9.21"
-    kotlin("plugin.spring") version "1.9.21"
-    kotlin("plugin.jpa") version "1.9.21"
-	
-    id("com.diffplug.spotless") version "6.24.0"
-    id("com.github.spotbugs") version "6.0.6"
-    id("com.github.ben-manes.versions") version "0.50.0"
-    // id("ca.cutterslade.analyze") version "1.9.1"
-    id("com.adarshr.test-logger") version "4.0.0"
+    alias(libs.plugins.org.springframework.boot)
+    alias(libs.plugins.io.spring.dependency.management)
+    alias(libs.plugins.org.asciidoctor.jvm.convert)
+    alias(libs.plugins.org.jetbrains.kotlin.jvm)
+    alias(libs.plugins.org.jetbrains.kotlin.plugin.spring)
+    alias(libs.plugins.org.jetbrains.kotlin.plugin.jpa)
+
+    alias(libs.plugins.com.diffplug.spotless)
+    alias(libs.plugins.com.github.spotbugs)
+    alias(libs.plugins.com.github.ben.manes.versions)
+    alias(libs.plugins.nl.littlerobots.version.catalog.update)
+    alias(libs.plugins.com.adarshr.test.logger)
 }
 
 group = "com.hs"
@@ -37,25 +37,25 @@ repositories {
 val snippetsDir by extra { file("build/generated-snippets") }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-cache")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    compileOnly("org.projectlombok:lombok")
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
-    runtimeOnly("com.h2database:h2")
-    annotationProcessor("org.projectlombok:lombok")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
+    implementation(libs.org.springframework.boot.spring.boot.starter.cache)
+    implementation(libs.org.springframework.boot.spring.boot.starter.data.jpa)
+    implementation(libs.org.springframework.boot.spring.boot.starter.validation)
+    implementation(libs.org.springframework.boot.spring.boot.starter.web)
+    implementation(libs.com.fasterxml.jackson.module.jackson.module.kotlin)
+    implementation(libs.org.jetbrains.kotlin.kotlin.reflect)
+    compileOnly(libs.org.projectlombok.lombok)
+    developmentOnly(libs.org.springframework.boot.spring.boot.devtools)
+    runtimeOnly(libs.com.h2database.h2)
+    annotationProcessor(libs.org.projectlombok.lombok)
+    testImplementation(libs.org.springframework.boot.spring.boot.starter.test)
+    testImplementation(libs.org.springframework.restdocs.spring.restdocs.mockmvc)
 
-    spotbugsPlugins("com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0")
+    spotbugsPlugins(libs.com.h3xstream.findsecbugs.findsecbugs.plugin)
 
     // Currently need to bring this in because Gradle does not have support for PMD7
     // and PMD 7 is  required for PMD support on Java17
-    pmd("net.sourceforge.pmd:pmd-ant:7.0.0-rc4")
-    pmd("net.sourceforge.pmd:pmd-java:7.0.0-rc4")
+    pmd(libs.net.sourceforge.pmd.pmd.ant)
+    pmd(libs.net.sourceforge.pmd.pmd.java)
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
@@ -147,6 +147,7 @@ tasks.withType<com.github.spotbugs.snom.SpotBugsTask> {
 //    reports.html.required = true
 // }
 
+// Tells dependency plugin to reject upgrade options if they aren't full releases.
 tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {
     rejectVersionIf {
         isNonStable(candidate.version) and !isNonStable(currentVersion)
