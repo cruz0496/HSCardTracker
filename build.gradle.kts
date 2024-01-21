@@ -2,7 +2,6 @@ plugins {
     pmd
     jacoco
     java
-    // checkstyle
 
     alias(libs.plugins.org.springframework.boot)
     alias(libs.plugins.io.spring.dependency.management)
@@ -141,11 +140,6 @@ tasks.withType<com.github.spotbugs.snom.SpotBugsTask> {
     reports.create("html").required = true
     reports.create("xml").required = true
 }
-
-// tasks.withType<Checkstyle> {
-//    reports.xml.required = true
-//    reports.html.required = true
-// }
 
 // Tells dependency plugin to reject upgrade options if they aren't full releases.
 tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {
