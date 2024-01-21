@@ -16,6 +16,35 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Prerequisites
 
+### Plugins
+
+While you are by no means required to use all the plugins I do I wanted to provide a list of the ones I used so you can have a feel for the kind of stuff I look for. Here are the plugins I use and a brief description of what they do:
+
+#### Visual:
+* Atom Material Icons - Adds icons to the editor.
+* Extra ToolWindow Colorful Icons - Adds more icons for the tool windows.
+* Material Theme UI - Powerful theming engine
+* Indent Rainbow - Help keep track of indentation
+* Rainbow Brackets - Helps keep track of brackets and scope
+* Awesome Editor - allows you to set a background for your editor.
+
+Linting:
+* KtLint - Kotlin linting
+* Palantir-java-format - Java linting
+
+Code Analysis Integration:
+* PMD - Integrate PMD into IntelliJ
+* SonarLint - Integrate Sonar into IntelliJ
+
+Formatting:
+* Spotless Gradle - Allows you to reformat code with spotless from intelliJ so it matches what the gradle task would do.
+
+Enhancements:
+* GitToolBox - Additional git features.
+* JPA Buddy - Helps manage JPA entities
+* Key Promoter X - Tells you when you use a menu action that could have been a shortcut.
+* Java Visualizer - Visualize java code during debugging
+
 ### Database Setup
 In order to access the database in Intellij you will need to add a data source. You can do this by going into `View > Tool Windows > Database`. This will open the database tool likely docked to the right side.
 
