@@ -6,6 +6,7 @@
 */
 package com.hs.cruzstone.card;
 
+import com.hs.cruzstone.card.hero.HeroTypeEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,6 +23,6 @@ class CardEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int internalCardId;
 
-    private CardClass cardClass;
+    private HeroTypeEnum heroTypeEnum;
     private int mana;
 }

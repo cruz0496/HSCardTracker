@@ -4,9 +4,9 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card;
+package com.hs.cruzstone.card.hero;
 
-public enum CardClass {
+public enum HeroTypeEnum {
     DRUID("Druid"),
     MAGE("Mage"),
     HUNTER("Hunter"),
@@ -21,11 +21,11 @@ public enum CardClass {
 
     private String prettyName;
 
-    CardClass(String prettyName) {
+    HeroTypeEnum(String prettyName) {
         this.prettyName = prettyName;
     }
 
-    CardClass() {}
+    HeroTypeEnum() {}
 
     public String getPrettyName() {
         return this.prettyName;

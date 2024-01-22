@@ -4,11 +4,9 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.minion;
+package com.hs.cruzstone.card.minion;
 
-import jakarta.validation.constraints.Min;
-
-public enum MinionEnum {
+public enum MinionTypeEnum {
   UNDEAD("Undead"),
   DEMON("Demon"),
   BEAST("Beast"),
@@ -24,15 +22,14 @@ public enum MinionEnum {
 
   private String prettyName;
 
+  MinionTypeEnum(String prettyName) {
+    this.prettyName = prettyName;
+  }
+
+  MinionTypeEnum(){}
+
   public String getPrettyName() {
     return prettyName;
   }
 
-  MinionEnum(){}
-
-
-
-  MinionEnum(String prettyName) {
-    this.prettyName = prettyName;
-  }
 }
