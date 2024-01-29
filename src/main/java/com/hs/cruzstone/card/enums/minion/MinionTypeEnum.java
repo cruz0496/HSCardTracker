@@ -4,7 +4,7 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card.minion;
+package com.hs.cruzstone.card.enums.minion;
 
 public enum MinionTypeEnum {
   UNDEAD("Undead"),

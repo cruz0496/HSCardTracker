@@ -4,7 +4,7 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card.hero;
+package com.hs.cruzstone.card.enums.hero;
 
 public enum HeroTypeEnum {
     DRUID("Druid"),

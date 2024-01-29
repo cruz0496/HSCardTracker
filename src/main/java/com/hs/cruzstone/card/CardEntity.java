@@ -6,7 +6,7 @@
 */
 package com.hs.cruzstone.card;
 
-import com.hs.cruzstone.card.hero.HeroTypeEnum;
+import com.hs.cruzstone.card.enums.hero.HeroTypeEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

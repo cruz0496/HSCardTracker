@@ -1,4 +1,4 @@
-package com.hs.cruzstone.card.spell;
+package com.hs.cruzstone.card.enums.spell;
 
 public enum SpellTypeEnum {
 
