@@ -51,7 +51,6 @@ public enum OtherAbilitiesEnum {
       "changes a card into something else while it is in the player’s hand."),
   UNLIMITED_ATTACKS("Unlimited Attacks", "Allows the possessing hero to attack an unlimited number of times each turn.");
 
-
   private String prettyName;
   private String description;
   OtherAbilitiesEnum(String prettyName, String description){}
