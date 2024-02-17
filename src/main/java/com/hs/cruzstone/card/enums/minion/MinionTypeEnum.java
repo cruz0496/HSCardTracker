@@ -7,29 +7,28 @@
 package com.hs.cruzstone.card.enums.minion;
 
 public enum MinionTypeEnum {
-  UNDEAD("Undead"),
-  DEMON("Demon"),
-  BEAST("Beast"),
-  PIRATE("Pirate"),
-  MECH("Mech"),
-  ELEMENTAL("Elemental"),
-  MURLOC("Murloc"),
-  DRAGON("Dragon"),
-  TOTEM("Totem"),
-  NAGA("Naga"),
-  QUILBOARD("Quilboar"),
-  ALL("All");
+    UNDEAD("Undead"),
+    DEMON("Demon"),
+    BEAST("Beast"),
+    PIRATE("Pirate"),
+    MECH("Mech"),
+    ELEMENTAL("Elemental"),
+    MURLOC("Murloc"),
+    DRAGON("Dragon"),
+    TOTEM("Totem"),
+    NAGA("Naga"),
+    QUILBOARD("Quilboar"),
+    ALL("All");
 
-  private String prettyName;
+    private String prettyName;
 
-  MinionTypeEnum(String prettyName) {
-    this.prettyName = prettyName;
-  }
+    MinionTypeEnum(String prettyName) {
+        this.prettyName = prettyName;
+    }
 
-  MinionTypeEnum(){}
+    MinionTypeEnum() {}
 
-  public String getPrettyName() {
-    return prettyName;
-  }
-
+    public String getPrettyName() {
+        return prettyName;
+    }
 }
