@@ -1,13 +1,12 @@
 package com.hs.cruzstone.card.entities;
 
-import com.hs.cruzstone.card.AbstractCard;
+import com.hs.cruzstone.card.Card;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.Data;
 
 @Entity
 @Data
-public class MinionCard extends AbstractCard {
+public class MinionCard extends Card {
 
     private int attack;
     private int health;

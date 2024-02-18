@@ -4,7 +4,7 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card.enums.keyword;
+package com.hs.cruzstone.card;
 
 /**
  * These abilities are specific to several cards that generate minions.

@@ -4,7 +4,7 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card.enums.spell;
+package com.hs.cruzstone.card.spell;
 
 public enum SpellSchoolEnum {
     ARCANE("Arcane"),

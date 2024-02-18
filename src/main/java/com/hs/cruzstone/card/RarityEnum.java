@@ -4,7 +4,7 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card.enums.rarity;
+package com.hs.cruzstone.card;
 
 public enum RarityEnum {
     COMMON("Common"),

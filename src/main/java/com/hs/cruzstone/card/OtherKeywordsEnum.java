@@ -4,7 +4,7 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card.enums.keyword;
+package com.hs.cruzstone.card;
 
 /**
  * The following keywords only appear in specific sets or are used very sparingly.

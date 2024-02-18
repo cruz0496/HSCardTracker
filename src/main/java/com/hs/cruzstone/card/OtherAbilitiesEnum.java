@@ -4,7 +4,7 @@
 *
 * Copyright 2024
 */
-package com.hs.cruzstone.card.enums.keyword;
+package com.hs.cruzstone.card;
 
 /**
  * These abilities don’t have specific keywords attached to them. They are common effects and abilities found on cards.
