@@ -17,7 +17,7 @@ public enum MinionTypeEnum {
     DRAGON("Dragon"),
     TOTEM("Totem"),
     NAGA("Naga"),
-    QUILBOARD("Quilboar"),
+    QUILBOAR("Quilboar"),
     ALL("All");
 
     private String prettyName;

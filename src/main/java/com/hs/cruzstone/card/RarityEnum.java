@@ -7,6 +7,8 @@
 package com.hs.cruzstone.card;
 
 public enum RarityEnum {
+
+    BASIC("Basic"),
     COMMON("Common"),
     RARE("Rare"),
     EPIC("Epic"),
